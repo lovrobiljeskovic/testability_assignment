@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Animal.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Testability_Assignments</a> &gt; <a href="index.source.html" class="el_package">src</a> &gt; <span class="el_source">Animal.java</span></div><h1>Animal.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package src;
+
+import java.util.List;
+
+/**
+ *
+ * @author lovro
+ */
+public class Animal {
+        private int legs;
+        private boolean hasFur;
+        private String species;
+        private List&lt;String&gt; offspring;
+
+<span class="fc" id="L20">        public Animal(int legs, boolean hasFur, String species, List&lt;String&gt; offspring) {</span>
+<span class="fc" id="L21">            this.legs = legs;</span>
+<span class="fc" id="L22">            this.hasFur = hasFur;</span>
+<span class="fc" id="L23">            this.species = species;</span>
+<span class="fc" id="L24">            this.offspring = offspring;</span>
+<span class="fc" id="L25">        }</span>
+        
+        private void washAnimal() {
+<span class="nc" id="L28">            System.out.println(&quot;washing&quot;);</span>
+<span class="nc" id="L29">        }</span>
+        
+        private void petAnimal(Animal animal) {
+<span class="nc" id="L32">            System.out.println(&quot;GJ MATE, YOU'VE PET&quot; + animal.species);</span>
+<span class="nc" id="L33">        }</span>
+        
+        public boolean willBeColdDuringWinter() {
+<span class="fc" id="L36">           return this.hasFur;</span>
+        }
+
+    public int getLegs() {
+<span class="nc" id="L40">        return legs;</span>
+    }
+
+    public void setLegs(int legs) {
+<span class="nc" id="L44">        this.legs = legs;</span>
+<span class="nc" id="L45">    }</span>
+
+    public boolean isHasFur() {
+<span class="nc" id="L48">        return hasFur;</span>
+    }
+
+    public void setHasFur(boolean hasFur) {
+<span class="nc" id="L52">        this.hasFur = hasFur;</span>
+<span class="nc" id="L53">    }</span>
+
+    public String getSpecies() {
+<span class="nc" id="L56">        return species;</span>
+    }
+
+    public void setSpecies(String species) {
+<span class="nc" id="L60">        this.species = species;</span>
+<span class="nc" id="L61">    }</span>
+
+    public List&lt;String&gt; getOffspring() {
+<span class="nc" id="L64">        return offspring;</span>
+    }
+
+    public void setOffspring(List&lt;String&gt; offspring) {
+<span class="nc" id="L68">        this.offspring = offspring;</span>
+<span class="nc" id="L69">    }</span>
+        
+        private void feedAnimal(Animal animal) {
+<span class="nc" id="L72">            System.out.println(&quot;FEED THAT&quot; + animal);</span>
+<span class="nc" id="L73">        }</span>
+        
+        private void printOffspring() {
+<span class="nc bnc" id="L76" title="All 2 branches missed.">            for (int i = 0; i &lt; offspring.size(); i++) {</span>
+<span class="nc" id="L77">                System.out.println(offspring.get(i));</span>
+            }
+<span class="nc" id="L79">        }</span>
+        
+    }
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>
